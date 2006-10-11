@@ -1,7 +1,6 @@
-package # hide from PAUSE
-        warnings::register;
+package warnings::compat;
 use strict;
-require warnings;
+use warnings;
 
 {   no strict;
     $VERSION = '0.02';
@@ -13,7 +12,7 @@ __END__
 
 =head1 NAME
 
-warnings::register - warnings.pm emulation for pre-5.6 Perls
+warnings::compat - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
@@ -21,13 +20,16 @@ Version 0.02
 
 =head1 SYNOPSIS
 
-    use warnings::register;
+    use warnings::compat;
 
 
 =head1 DESCRIPTION
 
-Create a warnings category with the same name as the current package.
-See L<warnings> for more information.
+This is a module for helping writing portable programs and modules across 
+recent and old Perls. The trick is that the C<warnings> pragma is located 
+in the core location while the C<warnings.pm> emulation module is installed 
+in the F<site_perl> location, therefore C<use warnings::compat> should DTRT 
+on every Perl version. 
 
 
 =head1 AUTHOR

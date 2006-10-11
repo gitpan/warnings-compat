@@ -4,6 +4,7 @@ META.yml
 Makefile.PL
 README
 lib/warnings.pm
+lib/warnings/compat.pm
 lib/warnings/register.pm
 t/00-load.t
 t/distchk.t

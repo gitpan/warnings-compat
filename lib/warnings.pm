@@ -4,7 +4,7 @@ use strict;
 use Carp;
 
 {   no strict;
-    $VERSION = '0.01';
+    $VERSION = '0.02';
 }
 
 =head1 NAME
@@ -13,7 +13,7 @@ warnings - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =head1 SYNOPSIS
 
@@ -27,7 +27,7 @@ Version 0.01
 =head1 DESCRIPTION
 
 This module is a very simple C<warnings.pm> emulation for Perls before 5.6.
-Its aim is to allow programs that uses this pragma to compile and run under 
+Its aim is to allow programs that use this pragma to compile and run under 
 old Perls by providing an API emulation, i.e. the functions work the same, 
 but will not behave exactly like the real module.  Under the hood, this 
 module simply uses C<$^W>. 
@@ -38,7 +38,7 @@ Shortcomings:
 
 =item *
 
-this is a module, not a proagma; therefore it isn't lexical;
+this is a module, not a pragma; therefore it isn't lexical;
 
 =item *
 
