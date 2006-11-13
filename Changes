@@ -1,5 +1,10 @@
 Revision history for warnings-compat
 
+0.03    2006.11.13  (SAPER)
+        [BUGFIX] RT-CPAN#23117: Prevent installation of the modules on recent
+        Perls because the real modules can be deleted by UNINST=1 (plus a few
+        other minor fixes). Thanks to Michael Schwern for the patch.
+
 0.02    2006.10.11  (SAPER)
         [FEATURE] Added warnings::compat.
         [DOC] Fixed a few typos.

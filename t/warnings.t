@@ -1,6 +1,13 @@
 #!perl -T
 use strict;
-use Test::More tests => 18;
+use Test::More;
+
+if ($] >= 5.006) {
+    plan skip_all => "Perl $] has its own warnings";
+}
+else {
+    plan tests => 18;
+}
 
 
 # warnings have been enabled by Test::Harness, so we must disable them

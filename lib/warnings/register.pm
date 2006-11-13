@@ -4,7 +4,7 @@ use strict;
 require warnings;
 
 {   no strict;
-    $VERSION = '0.02';
+    $VERSION = '0.03';
 }
 
 "this is the end of the module"
@@ -17,7 +17,7 @@ warnings::register - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =head1 SYNOPSIS
 

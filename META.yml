@@ -1,13 +1,19 @@
---- #YAML:1.0
-name:                warnings-compat
-version:             0.02
-abstract:            ~
-license:             perl
-generated_by:        ExtUtils::MakeMaker version 6.30_04
-author:              Sébastien Aperghis-Tramoni <sebastien@aperghis.net>
-distribution_type:   module
-requires:     
-    Test::More:                    0
+---
+name: warnings-compat
+version: 0.03
+author:
+  - 'Sébastien Aperghis-Tramoni <sebastien@aperghis.net>'
+abstract: warnings.pm emulation for pre-5.6 Perls
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+build_requires:
+  Test::More: 0
+provides:
+  warnings::compat:
+    file: lib/warnings/compat.pm
+    version: 0.03
+generated_by: Module::Build version 0.2805
 meta-spec:
-    url: http://module-build.sourceforge.net/META-spec-new.html
-    version: 1.1
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
