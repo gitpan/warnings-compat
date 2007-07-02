@@ -1,8 +1,10 @@
 use strict;
 use ExtUtils::MakeMaker;
 
-warn "This module is only intended for pre-5.6 Perls. Perl $] already has the "
-   . "real module, so nothing will be installed by the current distribution.\n"
+warn " -" x 20, $/, 
+     "This module is only intended for pre-5.6 Perls. Perl $] already has\n",
+     "the real module, so only a stub will be installed by the current distribution.\n",
+     " -" x 20, $/
     if $] >= 5.006;
 
 WriteMakefile(
@@ -16,7 +18,9 @@ WriteMakefile(
         'Test::More' => 0,
     },
     PL_FILES            => {},
-    ( $] >= 5.006 ? (PM => {}) : () ),
+    ( $] >= 5.006 ? (PM => {
+        "lib/warnings/compat.pm" => '$(INST_LIBDIR)/warnings/compat.pm'
+    }) : () ),
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'warnings-compat-*' },
 );

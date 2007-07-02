@@ -1,5 +1,10 @@
 Revision history for warnings-compat
 
+0.04    2007.07.02  (SAPER)
+        [BUGFIX] RT-CPAN#27908: Restore installation of warnings/compat.pm 
+        and only this one on modern Perl (5.6+). Thanks to Michael Schwern
+        for the patch.
+
 0.03    2006.11.13  (SAPER)
         [BUGFIX] RT-CPAN#23117: Prevent installation of the modules on recent
         Perls because the real modules can be deleted by UNINST=1 (plus a few

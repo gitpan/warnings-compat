@@ -4,7 +4,7 @@ use strict;
 use Carp;
 
 {   no strict;
-    $VERSION = '0.03';
+    $VERSION = '0.04';
 }
 
 =head1 NAME
@@ -13,7 +13,7 @@ warnings - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =head1 SYNOPSIS
 
@@ -50,7 +50,7 @@ probably other things..
 
 =back
 
-See the documentation of the real C<warning> module for more information: 
+See the documentation of the real C<warnings> module for more information: 
 L<http://perldoc.perl.org/warnings.html>
 
 =cut
