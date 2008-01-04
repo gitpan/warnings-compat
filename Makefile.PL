@@ -11,7 +11,7 @@ WriteMakefile(
     NAME                => 'warnings',
     DISTNAME            => 'warnings-compat',
     LICENSE             => 'perl',
-    AUTHOR              => 'Sébastien Aperghis-Tramoni <sebastien@aperghis.net>',
+    AUTHOR              => 'Sebastien Aperghis-Tramoni <sebastien@aperghis.net>',
     VERSION_FROM        => 'lib/warnings.pm',
     ABSTRACT            => 'warnings.pm emulation for pre-5.6 Perls',
     PREREQ_PM => {

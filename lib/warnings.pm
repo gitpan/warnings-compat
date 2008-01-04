@@ -4,7 +4,7 @@ use strict;
 use Carp;
 
 {   no strict;
-    $VERSION = '0.04';
+    $VERSION = '0.05';
 }
 
 =head1 NAME
@@ -13,7 +13,7 @@ warnings - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =head1 SYNOPSIS
 
@@ -110,7 +110,7 @@ SE<eacute>bastien Aperghis-Tramoni, C<< <sebastien at aperghis.net> >>
 
 Please report any bugs or feature requests to
 C<bug-warnings-compat at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=warnings-compat>.
+L<http://rt.cpan.org/Public/Dist/Display.html?Name=warnings-compat>.
 I will be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
@@ -146,7 +146,7 @@ L<http://search.cpan.org/dist/warnings-compat>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2006 SE<eacute>bastien Aperghis-Tramoni, all rights reserved.
+Copyright 2006, 2007, 2008 SE<eacute>bastien Aperghis-Tramoni, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

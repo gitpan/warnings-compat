@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 {   no strict;
-    $VERSION = '0.04';
+    $VERSION = '0.05';
 }
 
 "this is the end of the module"
@@ -16,7 +16,7 @@ warnings::compat - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =head1 SYNOPSIS
 
@@ -31,6 +31,13 @@ in the core location while the C<warnings.pm> emulation module is installed
 in the F<site_perl> location, therefore C<use warnings::compat> should DTRT 
 on every Perl version. 
 
+If you want this module to be automatically installed by the CPAN shell on
+old Perls, simply add it to the prerequisites list:
+
+    PREREQ_PM => {
+        "warnings::compat"  => 0,
+    }
+
 
 =head1 AUTHOR
 
@@ -41,7 +48,7 @@ SE<eacute>bastien Aperghis-Tramoni, C<< <sebastien at aperghis.net> >>
 
 Please report any bugs or feature requests to
 C<bug-warnings-compat at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=warnings-compat>.
+L<http://rt.cpan.org/Public/Dist/Display.html?Name=warnings-compat>.
 I will be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
@@ -50,7 +57,7 @@ your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc warnings
+    perldoc warnings::compat
 
 You can also look for information at:
 
@@ -77,7 +84,7 @@ L<http://search.cpan.org/dist/warnings-compat>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2006 SE<eacute>bastien Aperghis-Tramoni, all rights reserved.
+Copyright 2006, 2007, 2008 SE<eacute>bastien Aperghis-Tramoni, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
