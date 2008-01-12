@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 {   no strict;
-    $VERSION = '0.05';
+    $VERSION = '0.06';
 }
 
 "this is the end of the module"
@@ -16,7 +16,7 @@ warnings::compat - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =head1 SYNOPSIS
 
@@ -32,11 +32,24 @@ in the F<site_perl> location, therefore C<use warnings::compat> should DTRT
 on every Perl version. 
 
 If you want this module to be automatically installed by the CPAN shell on
-old Perls, simply add it to the prerequisites list:
+old Perls, simply add it to the prerequisites list in your F<Makefile.PL>:
 
     PREREQ_PM => {
         "warnings::compat"  => 0,
     }
+
+If you don't want to install it on modern Perls, you can use this variant:
+
+    # on pre-5.6 Perls, add warnings::compat to the prereq modules
+    push @extra_prereqs, "warnings::compat"  if $] < 5.006;
+
+    WriteMakefile(
+        ...
+        PREREQ_PM => {
+            ...
+            @extra_prereqs,
+        },
+    );
 
 
 =head1 AUTHOR
