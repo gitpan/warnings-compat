@@ -4,7 +4,7 @@ use strict;
 use Carp;
 
 {   no strict;
-    $VERSION = '0.05';
+    $VERSION = '0.07';
 }
 
 =head1 NAME
@@ -13,7 +13,7 @@ warnings - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
-Version 0.05
+Version 0.07
 
 =head1 SYNOPSIS
 
@@ -64,7 +64,7 @@ sub unimport { $^W = 0; }
 
 =over
 
-=item C<warrnings::enabled()>
+=item C<warnings::enabled()>
 
 Returns true if the warnings are enabled, false otherwise.
 

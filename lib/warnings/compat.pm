@@ -2,11 +2,11 @@ package warnings::compat;
 use strict;
 use warnings;
 
-{   no strict;
-    $VERSION = '0.06';
+{   no strict "vars";
+    $VERSION = '0.07';
 }
 
-"this is the end of the module"
+"experience Satoshi Kon's Paprika (great movie)"
 
 __END__
 
@@ -16,7 +16,7 @@ warnings::compat - warnings.pm emulation for pre-5.6 Perls
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =head1 SYNOPSIS
 
@@ -25,11 +25,12 @@ Version 0.06
 
 =head1 DESCRIPTION
 
-This is a module for helping writing portable programs and modules across 
-recent and old Perls. The trick is that the C<warnings> pragma is located 
-in the core location while the C<warnings.pm> emulation module is installed 
-in the F<site_perl> location, therefore C<use warnings::compat> should DTRT 
-on every Perl version. 
+This is a module to help writing portable programs and modules across recent
+and old versions of Perl by providing a unique API to enable and disable
+warnings. Under the hood, it will use the real C<warnings.pm> module when
+available, or install and use an emulation compatible with Perl 5.000.
+Therefore, C<use warnings::compat> should do the right thing on every Perl
+version.
 
 If you want this module to be automatically installed by the CPAN shell on
 old Perls, simply add it to the prerequisites list in your F<Makefile.PL>:
@@ -38,7 +39,11 @@ old Perls, simply add it to the prerequisites list in your F<Makefile.PL>:
         "warnings::compat"  => 0,
     }
 
-If you don't want to install it on modern Perls, you can use this variant:
+Note that only the files needed for your version of Perl will be installed
+(i.e., it won't install or overwrite the emulation modules on Perl 5.6
+and later).
+
+If you prefer to install it only on modern Perls, you can use this variant:
 
     # on pre-5.6 Perls, add warnings::compat to the prereq modules
     push @extra_prereqs, "warnings::compat"  if $] < 5.006;

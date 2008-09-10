@@ -1,5 +1,10 @@
 Revision history for warnings-compat
 
+0.07    2008.09.11  (SAPER)
+        [DOC] CPAN-RT#39170: Corrected the main description. Thanks to 
+        Michael Schwern for noting the outdated part.
+        [DOC] CPAN-RT#37740: Small pod typo, found by Slaven Rezic.
+
 0.06    2008.01.12  (SAPER)
         [DOC] CPAN-RT#29654 (follow-up): Added another way to list the module 
         as prereq, but only on old Perls. Suggested by Slaven Rezic.

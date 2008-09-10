@@ -5,11 +5,12 @@ NAME
 
 DESCRIPTION
 
-    This module is a very simple "warnings.pm" emulation for Perls before
-    5.6. Its aim is to allow programs that uses this pragma to compile and
-    run under old Perls by providing an API emulation, i.e. the functions
-    work the same, but will not behave exactly like the real module. Under
-    the hood, this module simply uses $^W.
+    This is a module to help writing portable programs and modules across
+    recent and old versions of Perl by providing a unique API to enable and
+    disable warnings. Under the hood, it will use the real warnings.pm
+    module when available, or install and use an emulation compatible with
+    Perl 5.000. Therefore, "use warnings::compat" should do the right thing
+    on every Perl version.
 
 
 INSTALLATION
